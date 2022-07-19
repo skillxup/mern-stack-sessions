@@ -1,0 +1,1 @@
+console.log('accessing sample1.js code');
