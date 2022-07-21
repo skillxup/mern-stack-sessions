@@ -1,0 +1,39 @@
+-> What is an ExpressJS?
+    - An ExpressJS is a web application framework for NodeJs.
+    - It provides various features that make web application development fast
+    - ExpressJS is based on the NodeJs middleware module called 'connect' which in turn uses the 'http' module.
+
+    Express.JS
+    connect
+    http
+    Node.Js
+
+-> Features of ExpressJS:
+    1. Makes NodeJs web application development fast and easy
+    2. Easy to configure and customize
+    3. Allows you to define routes of your application based on HTTP methods and URLs
+    4. Includes various middleware modules which you can perform additional tasks on request nd response
+    5. Easy to integrate with different template engines like Jade, EJS etc., 
+    6. Allows you to define an Error Handling middleware
+    7. Easy to serve Static Files and resources of your application
+    8. Allows you to create REST API server
+    9. Easy to connect with databases such as MongoDb, Redis, MySql
+
+-> Define Routes:
+    - use 'app' object to define different routes of your application.
+    - the 'app' object includes get(), post(), put(), and delete() methods to define routes for HTTP GET, POST, PUT, and DELETE requests respectively.
+
+-> Handle POST Request:
+    - to handle the POST Request, you need to create a form: index.html
+    - when you are working with form data, then you have to discus about 'Body Parser'
+    - Body Parser: to handle HTTP POST request in Express, we have to install the middleware - body-parser 
+    - the middleware was a part of Express earlier, 
+    - the 'body-parser module parses the JSON, buffer, string, and url encoded data submitted using HTTP POST request. 
+    - npm install body-parser
+
+-> Serving static resources in NodeJs
+    - It is easy to serve static files using builtin middleware in ExpressJs called 'express.static'
+    - using express.static() method we can serve the static resources directly by specifying the folder name where you have store the static resources 
+
+
+
