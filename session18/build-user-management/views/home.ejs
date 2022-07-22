@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Home</title>
+    <style>
+        table {
+            font-family: inherit;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ddd;
+        }
+
+        input[type="text"], 
+        button[type="submit"]
+        {
+            margin: 1px 2px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 3px 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h4>User Management</h4>
+
+        <hr />
+
+        <table>
+            <tr>
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+            <% data.forEach(element => { %> 
+                <tr>
+                    <td><%= element.userUniqueId %></td>
+                    <td><%= element.userName %></td>
+                    <td><%= element.userEmail %></td>
+                    <td><%= element.userAge %></td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <input type="text" name="userUniqueId" value="<%= element.userUniqueId %>" style="display: none;" />
+                            <button type="submit"> Delete </button>
+                        </form>
+                    </td>
+                    
+                </tr>
+            <% }) %>
+        </table>
+
+        <hr />
+
+        <h4>Add New User</h4>
+
+        <hr />
+
+        <form method="post" action="/">
+            <input type="text" placeholder="User Unique Id" name="userUniqueId" />
+            <input type="text" placeholder="User Name" name="userName" />
+            <input type="text" placeholder="User Email" name="userEmail" />
+            <input type="text" placeholder="User Age" name="userAge" />
+            <button type="submit"> Submit </button>
+        </form>
+
+        <hr />
+
+        <h4>Update User</h4>
+
+        <hr />
+
+        <form action="/update" method="post">
+            <input type="text" placeholder="User Unique Id" name="userUniqueId" />
+            <input type="text" placeholder="User Name" name="userName" />
+            <input type="text" placeholder="User Email" name="userEmail" />
+            <input type="text" placeholder="User Age" name="userAge" />
+            <button type="submit"> Update </button>
+        </form>
+    </div>
+</body>
+</html>
