@@ -1,0 +1,15 @@
+{
+    "employee_details": {
+        "_id": "ObjectId(mk43m546t227afeqfff)", 
+        "emp_id": "195NH"
+    }, 
+    "personal_details": {
+        "first_name": "rad", 
+        "last_name": "mui", 
+        "date_of_birth": "1588-6-64"
+    },
+    "contact_details": {
+        "email_id": "rad@gmail.com", 
+        "phone_no": "+9835252626"
+    }
+}

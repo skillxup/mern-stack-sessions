@@ -1,0 +1,194 @@
+1. create a new database
+    >>> use <database>
+2. switching from database to another database
+    >>> use <database>
+3. checking in which database that you are working
+    >>> db
+4. listing of all databases
+    >>> show dbs (or) >>> show databases
+5. drop database
+    >>> db.dropDatabase()
+
+6. creating the collection
+    >>> db.createCollection(<collectionName>)
+7. listing of all collections
+    >>> show collections
+8. drop the collection
+    >>> db.<collectionName>.drop()
+
+9. insert the documents / items: 
+    >>> db.<collectionName>.insert(<document>)
+    >>> db.posts.insert({
+        title: 'ReactJs Overview', 
+        description: 'Know more about the ReactJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ]
+    });
+
+example of inserting the items / documents: 
+db.post.insert([
+    {
+        title: 'ReactJs Overview', 
+        description: 'Know more about the ReactJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ], 
+        likes: 135, 
+        comments: [
+            {
+                user: 'user 1', 
+                message: 'my first comment on ReactJs', 
+                dateCreated: new Date()
+            }, 
+            {
+                user: 'user 2', 
+                message: 'new comment on ReactJs', 
+                dateCreated: new Date()
+            }
+        ]
+    }, 
+    {
+        title: 'NodeJs Overview', 
+        description: 'Know more about the NodeJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ], 
+        likes: 54, 
+        comments: [
+            {
+                user: 'user 3', 
+                message: 'NodeJs commented as success', 
+                dateCreated: new Date()
+            }, 
+            {
+                user: 'user 4', 
+                message: 'new comment about NodeJs', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+]);
+
+10. retrieve all documents
+    >>> db.<collectionName>.find()
+    >>> db.<collectionName>.find().pretty()
+
+11. inserting one item / document
+db.post.insertOne([
+    {
+        title: 'Php Overview', 
+        description: 'Know more about the Php Terms', 
+        by: 'Johny', 
+        url: 'https://www.php.net', 
+        tags: [
+            'php', 
+            'web development'
+        ], 
+        likes: 25, 
+        comments: [
+            {
+                user: 'user 34', 
+                message: 'my first comment on Php', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+]);
+
+    
+12. inserting multiple items:
+db.post.insertMany([
+    {
+        title: 'ExpressJs Overview', 
+        description: 'Learn more about the ExpressJs Terms', 
+        by: 'Sam', 
+        url: 'https://www.expressjs.com', 
+        tags: [
+            'expressjs', 
+            'nodejs framework'
+        ], 
+        likes: 75, 
+        comments: [
+            {
+                user: 'user 28', 
+                message: 'my first comment on expressjs', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+]);
+
+>>> use employees
+>>> db.createCollection('empDetails')
+>>> db.empDetails.insertMany([
+    {
+        _id: 96462326, 
+        firstName: 'rahik', 
+        lastName: 'shrm', 
+        age: 27, 
+        emailAddress: 'rahik.sharm@gmail.com', 
+        phoneNumber: '+91 17 59 454 688'
+    }, 
+    {
+        _id: 5437843,  
+        firstName: 'rudvhi', 
+        lastName: 'ark', 
+        age: 23, 
+        emailAddress: 'rudvhi@gmail.com', 
+        phoneNumber: '+91 71 94 432 688', 
+        dateOfBirth: '1289-9-3'
+    }, 
+    {
+        _id: 26748473, 
+        firstName: 'anany', 
+        lastName: 'maeru', 
+        age: 24, 
+        emailAddress: 'anny@gmail.com', 
+        phoneNumber: '+91 96 94 432 688', 
+        dateOfBirth: '1189-09-23'
+    }, 
+    {
+        _id: 952533112, 
+        firstName: 'david', 
+        lastName: 'mark', 
+        age: 23, 
+        emailAddress: 'davidmark@gmail.com', 
+        phoneNumber: '+91 71 94 975 688', 
+        dateOfBirth: '1453-2-23'
+    }
+]);
+
+
+Querying the Items:
+13. fetching all documents: 
+    >>> db.<collectionName>.find();
+    >>> db.<collectionName>.find().pretty();
+
+14. fetching one document: 
+    >>> db.<collectionName>.findOne();
+    >>> db.<collectionName>.findOne().pretty();
+
+15. AND: 
+    >>> db.<collectionName>.find($and: [{<key1>: <value1>}, {<key2>: <value2>}}])
+    >>> db.post.find({$and: [{"by": 'Johny'}, {"title": 'NodeJs Overview'}]}).pretty();
+
+16. OR: 
+    >>> db.post.find({$or: [{"by": 'Johny'}, {"title": 'NodeJs Overview'}]}).pretty();
+
+17. AND & OR: 
+    >>> db.post.find({"likes": {$gt: 3}, $or: [{"by": "NodeJs Overview"}, {"title": "NodeJs Overview"}]})
+
+18. AND & NOR: 
+    >>> db.post.find({"likes": {$gt: 3}, $nor: [{"by": "NodeJs Overview"}, {"title": "NodeJs Overview"}]})
+
+19. NOT: 
