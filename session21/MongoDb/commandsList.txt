@@ -1,0 +1,230 @@
+1. create a new database
+    >>> use <database>
+2. switching from database to another database
+    >>> use <database>
+3. checking in which database that you are working
+    >>> db
+4. listing of all databases
+    >>> show dbs (or) >>> show databases
+5. drop database
+    >>> db.dropDatabase()
+
+6. creating the collection
+    >>> db.createCollection(<collectionName>)
+7. listing of all collections
+    >>> show collections
+8. drop the collection
+    >>> db.<collectionName>.drop()
+
+9. insert the documents / items: 
+    >>> db.<collectionName>.insert(<document>)
+    >>> db.posts.insert({
+        title: 'ReactJs Overview', 
+        description: 'Know more about the ReactJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ]
+    });
+
+example of inserting the items / documents: 
+db.post.insert([
+    {
+        title: 'ReactJs Overview', 
+        description: 'Know more about the ReactJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ], 
+        likes: 135, 
+        comments: [
+            {
+                user: 'user 1', 
+                message: 'my first comment on ReactJs', 
+                dateCreated: new Date()
+            }, 
+            {
+                user: 'user 2', 
+                message: 'new comment on ReactJs', 
+                dateCreated: new Date()
+            }
+        ]
+    }, 
+    {
+        title: 'NodeJs Overview', 
+        description: 'Know more about the NodeJs Terms', 
+        by: 'Johny', 
+        url: 'https://www.reactjs.com', 
+        tags: [
+            'reactjs', 
+            'web development'
+        ], 
+        likes: 54, 
+        comments: [
+            {
+                user: 'user 3', 
+                message: 'NodeJs commented as success', 
+                dateCreated: new Date()
+            }, 
+            {
+                user: 'user 4', 
+                message: 'new comment about NodeJs', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+]);
+
+10. retrieve all documents
+    >>> db.<collectionName>.find()
+    >>> db.<collectionName>.find().pretty()
+
+11. inserting one item / document
+db.post.insertOne(
+    {
+        title: 'Php Overview', 
+        description: 'Know more about the Php Terms', 
+        by: 'Johny', 
+        url: 'https://www.php.net', 
+        tags: [
+            'php', 
+            'web development'
+        ], 
+        likes: 25, 
+        comments: [
+            {
+                user: 'user 34', 
+                message: 'my first comment on Php', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+);
+
+    
+12. inserting multiple items:
+db.post.insertMany([
+    {
+        title: 'ExpressJs Overview', 
+        description: 'Learn more about the ExpressJs Terms', 
+        by: 'Sam', 
+        url: 'https://www.expressjs.com', 
+        tags: [
+            'expressjs', 
+            'nodejs framework'
+        ], 
+        likes: 75, 
+        comments: [
+            {
+                user: 'user 28', 
+                message: 'my first comment on expressjs', 
+                dateCreated: new Date()
+            }
+        ]
+    }
+]);
+
+>>> use employees
+>>> db.createCollection('empDetails')
+>>> db.empDetails.insertMany([
+    {
+        First_Name: "Johnny", 
+        Last_Name: "Gou", 
+        Age: "26", 
+        Email_Address: "johnny_gou@gmail.com", 
+        Phone_Number: "9345623456"
+    }, 
+    {
+        First_Name: "Rachel", 
+        Last_Name: "Chist", 
+        Age: "27", 
+        Email_Address: "rachel_chist@gmail.com", 
+        Phone_Number: "8673457928"
+    }, 
+    {
+        First_Name: "Shiel", 
+        Last_Name: "Snumo", 
+        Age: "24", 
+        Email_Address: "shiel_snumo@gmail.com", 
+        Phone_Number: "6534782398"
+    }
+]);
+
+
+Querying the Items:
+13. fetching all documents: 
+    >>> db.<collectionName>.find();
+    >>> db.<collectionName>.find().pretty();
+
+14. fetching one document: 
+    >>> db.<collectionName>.findOne();
+    >>> db.<collectionName>.findOne().pretty();
+
+15. AND: 
+    >>> db.<collectionName>.find({$and: [{<key1>: <value1>}, {<key2>: <value2>}}]})
+    >>> db.empDetails.find({$and: [{"First_Name": "Johnny"}, {"Age": "27"}]}).pretty();
+
+16. OR: 
+    >>> db.<collectionName>.find({$and: [{<key1>: <value1>}, {<key2>: <value2>}}]})
+    >>> db.empDetails.find({$or: [{"First_Name": "Johnny"}, {"Age": "27"}]}).pretty();
+
+17. AND & OR: 
+    >>> db.post.find({"likes": {$gt: 10}})
+    >>> db.post.find({"by": "Johnny"})
+    >>> db.post.find({"likes": {$gt: 10}, $or: [{"by": "Johny"}, {"title": "Php Overview"}]})
+
+18. AND & NOR: 
+    >>> db.post.find({"likes": {$gt: 10}, $nor: [{"by": "Johny"}, {"title": "Php Overview"}]})
+
+19. NOT: 
+    >>> db.post.find({"likes": {$not: {$gt: 100}}})
+
+20. UPDATE: 
+    >>> db.tutDetails.update({"title": "Java"}, {$set: {"title": "Spark"}}, {multi: true});
+
+21. SAVE: (check it)
+    >>> db.tutDetails.save({"_id": objectId(), "title": "Github"})
+
+22. Find One and Update: 
+    >>> db.tutDetails.findOneAndUpdate({title: 'Angular'}, {$set: {title: 'Typescript'}})
+
+23. UPDATE ONE: 
+    >>> db.tutDetails.updateOne({title: 'Spark'}, {$set: {title: 'React Native'}})
+
+24. UPDATE MANY: 
+    >>> db.post.updateMany({likes: {$gt: 100}}, {$set: {likes: 50}})
+
+25. DELETE: 
+    - remove()
+    >>> db.post.remove({title: 'Php Overview'})
+    >>> db.post.deleteOne({title: 'NodeJs Overview'})
+
+
+26. Projection: 
+    >>> db.tutDetails.find({}, {"title": 1, _id: 0})
+
+27. Limit: 
+    >>> db.tutDetails.find().limit(2)
+    >>> db.tutDetails.find({}, {"title": 1, _id: 0}).limit(2)
+
+28. Skip: 
+    >>> db.tutDetails.find({}, {"title": 1, _id: 0}).limit(1).skip(1)
+
+29. Sort: 
+    >>> db.tutDetails.find({}, {"title": 1, _id: 0}).sort({"title": -1})
+
+30. Index: 
+    - createIndex()
+    >>> db.post.createIndex({"title": 1})
+    >>> db.post.createIndex({"title": 1, "by": 1})
+
+    - dropIndex()
+    >>> db.post.dropIndex({"title": 1})
+    >>> db.post.dropIndexes({"title": 1, "by": 1})
+
+    - getIndexes()
+    >>> db.post.getIndexes({"title": 1})

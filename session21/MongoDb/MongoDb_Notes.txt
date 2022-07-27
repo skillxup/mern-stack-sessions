@@ -1,0 +1,117 @@
+-> MongoDb: 
+    - MongoDb is an open source document database.
+    - MongoDb is a cross - platform, document oriented database that provides high performance, high availability, easy scalability. 
+   - MongoDb works on conccept of collection and document.
+
+   - Database: It is a physical container for collections. each database gets its own set of files on the file system. a single MongoDb server typically has multiple databases
+   - Collection: a collection is a group of MongoDb documents, it is the equivalent of an RDBMS table. a collection exists within a single database. collections do not engorce a schema. 
+   - Document: the document with in a collection has different fieds. a document is a set of key - value pairs, document have dynamic schema. 
+   - Schema: schema means that documents in the same collection do not need to have the same set of fields or structure, and common fields in a collection's documents may hold different types of data.
+
+   - RDBMS: Database, Table, Tuple / Row, Column, Table Join, Primary Key
+   - MongoDb: Database, Collection, Document, Field, Embedded documents, Primary Key (default key_id provided by MongoDb itself)
+
+   - Sample Document: example: sample_document.json
+
+-> Advantages of MongoDb over RDBMS: 
+    - schema less: mongodb is a document database in which one collection holds different documents. number of fields, conntent and size of the document can differ from one document to another
+    - structure of a single object is clear
+    - no complex joins
+    - supports dynamic queries on documents 
+    
+-> Why use MongoDb?
+    - document oriented storage - data is stored in the form of JSON style documents
+    - index on any attribute
+    - replication and high availability
+    - auto-sharding
+
+-> Where to use mongodb?
+    - Big Data
+    - Content Management and Delivery
+    - Mobile and Social Infrastructure
+    - User Data Management
+
+-> Commands: checkDb.js
+-> Data Modelling: 
+    - data in mongodb has a flexible schema.documents in the same collection.
+    - Data Model Design: 
+        - MongoDb provides 2 types of data models: 
+            1. Embedded data model:  in this model you can embed all the related data in a single document, it is also known as de-normalized data model
+            example: embeddedDataModel.json
+
+            2. Normalized data model: in this model, you can refer the sub documents in the original document, using references
+            example: normalizedDataModel.json
+
+-> Considerations while designing the schema: 
+    1. combine objects into one document 
+    2. duplicate the data because disk space is cheap as compare to compute time
+    3. do joins while write, not on read
+    4. optimize your scema for most frequent use cases
+    5. do complex aggrgation in the schema
+    example: schemaConsiderations.json
+
+-> Create, Show & Drop Database:
+    - use <database_name>
+    - show dbs (or) show databases
+    - db.dropDatabase() - to drop the database
+
+-> Collections: 
+    - create collection: db.createCollection(name, [options])
+    - name: name of the database
+    - options: 
+        capped - capped collection is a fixed size collection that automatically overwrites its oldest entries when it reaches the maximum size. if ou set it as true, 
+
+        autoIndexId - if you set it as true, the autoIndexId will be created an indexId 
+
+        size - capped do..
+        max - setting the no of documents allowed in the capped collections
+    - example: db.createCollection('mycollection')
+    - example: db.createCollection('mycol', { capped: true, autoIndexID: true, size: 6142800, max: 10000 })
+
+
+-> Documents: 
+    - db.mycollection.insert({"name": "mongodb"})
+
+-> DataTypes: 
+    - the mongodb supports different types of datatypes
+        1. string 
+        2. integer 
+        3. boolean - true / false 
+        4. double - floating point values
+        5. min / max keys - used to compare a value against the lowest and highest bson elements
+        6. arrays - store arrays or list or multiple values into one 
+        7. timestamp - recording when a document has been modified or added 
+        8. object - used for embedded documents
+        9. null - used to store null value
+        10. symbol - used identically to a string
+        11. date - store the current date or time 
+        12. objectID - used to store the documents ID
+        13. binary data - used to store the binary data
+        14. code - used to store javascript code into the document
+        15. regular expression - used to store regular expression
+
+-> Insert Document: 
+-> Fetching Documents: 
+-> RDBMS where clause which is equivalent with MongoDb
+-> OPERATORS - AND, OR, NOR, NOT
+-> UPDATE, DELETE
+
+-> Projection: 
+    - Selecting only the necessary data rather than selecting the whole of the data of a document. 
+    
+-> Limit: 
+    - limiting the no of records
+
+-> Skip: 
+    - skipping the no of documents
+
+-> Sort: 
+    - the sort() methods can sort the documents either ascending (1) or descending (-1)
+
+-> Indexing: 
+    - indexes supports the efficient resolution of queries
+    - createIndex()
+
+-> Aggregation: 
+    - the aggregation operations process data records and return computed results.
+    - the aggregation operations group values from multiple documents together, 
