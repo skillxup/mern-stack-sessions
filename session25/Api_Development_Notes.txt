@@ -1,0 +1,118 @@
+Api: Application Programming Interface
+Rest Api: Representational State Transfer - an architectural style that defines a set of constraints to be used for creating the web services. Rest Api is a way of accessing web services in a simple and flexible without having any processing.
+
+client -> send a request -> server (http://www.google.com/api/users)
+server -> send a response -> client (html, image, xml, soap)
+
+1. Creating a Sample RestApi through NodeJs with Typescript:
+1. Initialized the package - npm init -y
+2. Install the typescript: npm install -g typescript
+    Install the required dependencies:
+	1. typescript - a typescript compiler with static set type definitions
+	2. ts-node - allows us to run and configure typescript execution environments
+	3. express - nodejs web application framework for setting and managing web based server
+	4. @types/express - type definitions for express
+	5. morgan - a nodejs HTTP request logger middleware
+	6. @types/morgan - type definitions for morgan
+	7. axios - a nodejs promise based HTTP client library - for sending HTTP requests to query and consume resources from API's
+	8. @types/axios - type definitions for axios
+	9. nodemon - a server utility library for monitoring changes of the code 
+
+npm install typescript ts-node express @types/express morgan @types/morgan axios @types/axios
+npm install nodemon -D
+3. initialize typescript:
+    > tsc --init - it will create - tsconfig.json file
+4. check few things in tsconfig.json
+5. created the folder structure
+create-restapi-nodejs/
+  package.json
+  tsconfig.json
+  source/
+    server.ts
+    controllers/
+      posts.ts
+    routes/
+      posts.ts
+ 6. in postman - GET: http://localhost:6060/ , /2; POST: PUT: DELETE
+
+2. Create the RestApi using ExpressJs and NodeJs
+3. Handling Request Validation RestApi
+4. Body Validation
+5. Implementation of JWT
+	- Authentication is one of the most important parts in almost applications, from desktop to web & mobile apps., 
+	- This JWT - JSON Web Token 
+		1. Session - based Authentication vs Token - based Authentication 
+		2. How JWT works
+		3. How to create a JWT
+		4. How we can secure our app., and validate JWT
+
+1. Session - based Authentication & Token - based Authentication:
+	- For using any website, or an app., - you almost need to create an account, then use it to login for accessing features of an appl., - we call that action is 'Authentication'
+	- So, how to authenticate an account?
+	
+Session Based Authentication:
+Browser: 
+	1. send Login Data (username, password) - to Server
+Server: 
+	2. send Session to database - to Browser
+Browser: 
+	3. return Cookie (sessionId) - cookie
+	4. send Authenticated request with Cookie (sessionId) - to Server 
+Server: 
+	5. check sessionId with stored Session - at Server
+Browser: 
+	6. return Response
+
+
+Token Based Authentication:
+Browser: 
+	1. send Login Data (username, password) - to Server
+Server: 
+	2. send Session to database - to Browser
+Browser: 
+	3. return Cookie (JWT) - localStorage
+	4. send Authenticated request with Cookie (JWT) - to Server 
+Server: 
+	5. check sessionId with stored Session - at Server
+Browser: 
+	6. return Response
+
+
+2. How JWT works?
+	- send Login Data (B)
+	- create JWT with 'secret'  (S)
+	- return JWT (B)
+	- send Authenticated request with JWT in header (B)
+	- validate JWT (S)
+	- return Response (B)
+
+3. How to Create a JWT?
+	- Header
+	- Payload
+	- Signature
+
+1. Header: the Headers are the two keys with Type & Alg
+{typ: "JWT", "alg": "HS256"}
+
+2. Payload: your data
+{ "userId": 34, "username": "john"}
+
+3. Signature: It is a part where we can use the Hash Algorithm
+const data = Base64UrlEncode(header) + ' . ' + Base64UrlEncode(payload);
+const hashedData = Hash(data, secret);
+const signature = Base64UrlEncode(hashedData)
+
+combining all together:
+const encodedHeader = base64UrlEncode(header);
+const encodedpayload = base64UrlEncode(payload);
+const data = encodedHeader + "." + encodedPayload;
+const hashedData = Hash(data, secret);
+const signature = base64UrlEncode(hashedData);
+const jwt = encodedHeader + "." + encodedPayload + "." + signature;
+
+
+4. How JWT secure our data?
+
+
+
+
