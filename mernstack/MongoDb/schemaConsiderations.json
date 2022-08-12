@@ -1,0 +1,33 @@
+{
+    "_id": "POST_ID", 
+    "title": "TItle_Of_Post", 
+    "description": "Post_Description", 
+    "by": "Post_By", 
+    "url": "Post_Url", 
+    "tags": [
+        "Tag1", 
+        "Tag2", 
+        "Tag3"
+    ], 
+    "likes": "Total_Likes", 
+    "comments": [
+        {
+            "user": "Comment_By", 
+            "message": "Txt", 
+            "dateCreated": "Date_Time", 
+            "like": "No_of_likes"
+        }, 
+        {
+            "user": "Comment_By", 
+            "message": "Txt", 
+            "dateCreated": "Date_Time", 
+            "like": "No_of_likes"
+        }
+    ], 
+    "users": [
+        {
+            "user_id": "User_Id", 
+            "user_name": "User_Name"
+        }
+    ]
+}

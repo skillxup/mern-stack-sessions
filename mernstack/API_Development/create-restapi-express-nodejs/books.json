@@ -1,0 +1,52 @@
+[
+    {
+        "isbn": "572626", 
+        "title": "React", 
+        "author": "", 
+        "published": "", 
+        "publisher": "", 
+        "pages": 35, 
+        "description": "", 
+        "website": ""
+    }, 
+    {
+        "isbn": "736224215", 
+        "title": "MuleSoft", 
+        "author": "", 
+        "published": "", 
+        "publisher": "", 
+        "pages": 85, 
+        "description": "", 
+        "website": ""
+    }, 
+    {
+        "isbn": "635848372", 
+        "title": "ServiceNow", 
+        "author": "", 
+        "published": "", 
+        "publisher": "", 
+        "pages": 56, 
+        "description": "", 
+        "website": ""
+    }, 
+    {
+        "isbn": "946256223", 
+        "title": "AWS", 
+        "author": "", 
+        "published": "", 
+        "publisher": "", 
+        "pages": 35, 
+        "description": "", 
+        "website": ""
+    }, 
+    {
+        "isbn": "572626", 
+        "title": "MernStack", 
+        "author": "", 
+        "published": "", 
+        "publisher": "", 
+        "pages": 95, 
+        "description": "", 
+        "website": ""
+    }
+]

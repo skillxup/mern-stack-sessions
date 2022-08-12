@@ -1,0 +1,23 @@
+[
+    {
+        First_Name: "Johnny", 
+        Last_Name: "Gou", 
+        Age: "26", 
+        Email_Address: "johnny_gou@gmail.com", 
+        Phone_Number: "9345623456"
+    }, 
+    {
+        First_Name: "Rachel", 
+        Last_Name: "Chist", 
+        Age: "27", 
+        Email_Address: "rachel_chist@gmail.com", 
+        Phone_Number: "8673457928"
+    }, 
+    {
+        First_Name: "Shiel", 
+        Last_Name: "Snumo", 
+        Age: "24", 
+        Email_Address: "shiel_snumo@gmail.com", 
+        Phone_Number: "6534782398"
+    } 
+]

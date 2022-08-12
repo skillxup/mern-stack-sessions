@@ -1,0 +1,118 @@
+-> Console Based
+    console.log(), 
+    console.warn(), 
+    console.error()
+
+-> Creating a Web Based
+    1. import the required modules
+    2. create a server connection
+    3. read request and send response
+
+-> REPL: 
+    Read: It read the user's input; parse the input into javascript data structure and stored in memory
+    Eval: It takes and evaluats the data structure
+    Print: It priits the results
+    Loop: It loops the previous commands untill user press ctrl + c twice
+
+-> NPM Package Manager:
+    - NPM provides 2 main functionalists: 
+        1. It provides online repositories for nodejs packages / modules which are searchable on npmjs.com
+        2. It also provides command line utility to install nodejs packages / modules, do version management and dependency management of nodejs packages
+    - cmd: npm version
+    - install the modules using npm: 
+        npm install <modulename>
+        npm install express (local)
+        npm install -g express (global)
+    - uninstall the modules: 
+        npm uninstall <modulename>
+        npm uninstall express
+    - list of installed modules
+        npm ls
+
+-> Global Objects: 
+    - the nodejs global objects are global in nature and are available in all modules.
+    - the objects are modules - functions
+    - list of global objects: 
+        1. __dirname
+        2. __filename 
+        3. console
+        4. buffer
+        5. process
+        6. setInterval(), setTimeout(), setImmediate(), 
+        7. clearInterval(), clearTimeout(), clearImmediate()
+
+-> Buffer: 
+    - the nodejs buffer provides the class to store the raw data similar to an array of an object but corresponds to a raw memory allocation.
+
+-> Timers: 
+    6. setInterval(), setTimeout(), setImmediate(), 
+    7. clearInterval(), clearTimeout(), clearImmediate()
+
+-> OS Module:
+    - arch(), cpus(), endianess(), freemem()
+
+-> Errors: 
+    - Standard Javascript Errors - 
+        EvalError, SyntaxError, RangeError, ReferenceError, TypeError, IOError
+    - System Errors
+    - User Defined Errors
+    - Assertion Errors - to know the failure results
+
+-> DNS: 
+    - Domain Name Server (DNS)
+    - lookup(), 
+
+-> Net: ability to perform socket programming (ex., chat)
+
+-> Crypto: hash - is a fixed length string of bits & hmac - hash based message authentication code 
+
+-> Debug / Inspect
+
+-> Process: 
+    1. exec()
+    2. spawn()
+    3. fork()
+
+-> Streams - streams are the objects that facilitates you to read data from source and write data to destination.
+        - there are 4 different ways of streams
+            1. readable - used to read streams
+            2. writable - used to write streams
+            3. duplex - can be used for both read and write
+            4. transform - it is a type of duplex stream where output is computed according to input - ex., 2 - '2', 5 + 4
+
+        - each type of stream is an EventEmitter instance and throws several events at different time.
+        - we are having 4 events
+            - data - this event is fired when there is a data available to read
+            - end - this event is fired when there is no more data available to read 
+            - error - this event is fired when there is any error receiving or writing data 
+            - finish - this event is fired when all data has been flushed to underlying system
+
+-> File System
+    - open, read, write, stats
+    - isfile(), isdirectory(), isfifo(), issocket(), 
+
+-> Path - path is also one of the module to handdle and transform the paths.
+-> String DeCoder: used to decode the buffer into string - buf.toString()
+
+-> CallBacks - a CallBack is a function which can have its own parameters and that function can be placed inside the another function as a one of the parameters
+
+-> EventEmitter: 
+    - Events and CallBacks concepts are used to provide concurrency.
+    - Event Driven Programming: 
+        - as soon as the nodejs starts its server, it simply initiates its variables, declare functions and then simply waits for event to occur.
+        - the main loop in the event driven application that listens for events and then triggers a callback function when one of those is detected
+
+-> WebServer: 
+    - client layer: the client layyer contains the web browsers, mobile browsers - which can make HTTP requets to the web server
+    - server layer: the server layer contains web server which can intercepts the requests made by clients and pass them the response 
+    - business layer: the business layer contains application server which is utilized by web server to do required processing, this layer interacts with data layer via database or some external programs
+    - data layer: the data layer contains databases or any source of data
+
+-> External Modules: 
+    - the nodejs adopts this commonJs formatting for organizing application nto multiple files.
+    - types of node modules: simplex or complex functionalists
+        1. local / file based modules
+        2. core modules
+        3. third party modules
+
+    - how to export modules: 

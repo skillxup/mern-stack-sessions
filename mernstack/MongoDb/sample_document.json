@@ -1,0 +1,33 @@
+{
+    "_id": "ObjectId(fq333fhffff)", 
+    "title": "MongoDb Document", 
+    "description": "MongoDb is NoSql Database", 
+    "url": "https://mongodb.com", 
+    "tags": ["mongodb", "database", "nosql"], 
+    "comments": [
+        {
+            "user": "user1", 
+            "message": "its an intro", 
+            "dateCreated": new Date(2022, 7, 25, 12, 10, 00)s, 
+            "like": 0
+        }, 
+        {
+            "user": "user2", 
+            "message": "its an intro", 
+            "dateCreated": new Date(), 
+            "like": 0
+        }, 
+        {
+            "user": "user3", 
+            "message": "its an intro", 
+            "dateCreated": new Date(), 
+            "like": 0
+        }, 
+        {
+            "user": "user4", 
+            "message": "its an intro", 
+            "dateCreated": new Date(), 
+            "like": 0
+        }
+    ]
+}

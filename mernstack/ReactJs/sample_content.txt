@@ -1,0 +1,65 @@
+A Template for Killer Website Content
+
+Over the years of developing websites for clients, I’ve learned that the age-old adage, “If you want it done right, you gotta do it yourself,” can be a two-way street.
+
+Of course, there are companies out there that have great web writers internally, but most don’t. And the thought of a company turning a great website content strategy (that we slaved over) into an ineffective “brochure site” gives me heartburn. But sometimes you have to pick your battles.
+
+In cases where we give in and let the client take the content reins, we at least want to make sure they are equipped with a template that gives them a fighting chance to produce effective website content that drives action. Here is a template we like to use, and an explanation of what’s included.
+
+Website content template components
+
+Pre-writing questions: Before starting any given page, you really need to wrap your heads around the primary goal of the page and to whom this page is targeted. What’s their pain? What’s in it for them? Where are they in their buying process? And what keywords or phrases would they most likely use to search for your solution? The best writers are those who can put themselves in the buyer’s shoes and write as if they are having a one-on-one conversation with that buyer.
+
+Businesses and organizations
+
+    AirTran Airways (IATA airline code), defunct American airline
+    FL Group, an Icelandic investment company with an emphasis on flight and tourism industry
+    Foot Locker (ticker symbol), retailer
+
+Numismatics
+
+    Florin (disambiguation), various coins
+    Guilder, various coins also sometimes called "florin"
+
+Science and technology
+
+    Florida (United States postal abbreviation)
+    Liechtenstein (Fürstentum Liechtenstein)
+
+
+Biology and medicine
+
+    FLT3LG (Fms-related tyrosine kinase 3 ligand), a protein
+    Fluffy transcription factor, gene of Neurospora crassa
+    Fluorouracil (5-FU), and leucovorin (folinic acid), 
+    A chemotherapy regimen for treating colon cancer
+    Follicular lymphoma in medicine
+    Frontal lobe, the largest brain lobe
+
+Typical web page structure and formatting guidelines
+
+After years of experimenting, most of us web folks have the best practices of website content nailed down, and we feel like this template covers the bases. Here are a few key elements:
+
+Headlines
+As with most media, a great headline or page title can make or break a page. But specific to web content, it’s important to remember the SEO aspects. Integrating a major keyword/phrase into a headline and programming the page title with a relevant <h1> tag can add some nice Google juice.
+
+Sub-headlines:
+Visitors scan before they read, so creating enticing, benefits-focused sub-headlines can really boost the odds that your page will be read. I like to run a “scan test” on every page  to see if I can get the gist of page by just scanning the page title, subheads, and call to action.
+
+Images:
+I’ve always had an interest in neuropsychology, and I couldn’t help but devour Susan Weinschenk’s book, Neuro Web Design back in 2009. Throughout the book she talks about how we subconsciously process everything we see on a website, but she summarizes that “stories and pictures are the most powerful ways to get and hold our attention and persuade us to take action.”Let’s not forget about Google. Optimizing your image’s file name and alt tag with a keyword/phrase provides the context Google needs and validates the relevance of your page.
+
+Bulleted and numbered lists:
+I love bulleted lists. Lists make content much easier to digest. Even the slightest indention and bullet will draw the reader’s eye. Oh, and Google likes these too.
+
+Calls to action:
+Despite the intelligence level of your site visitors, people don’t want to have to think when they are browsing websites. Obvious command-oriented calls to action are key in moving visitors through your website. And don’t be scared to make the call to action a BIG BUTTON. Bigger is better, but don’t make it look like a banner.
+Post-writing checklist
+
+Finally, the template includes a checklist of items and reminders you can use to ensure your page is good to go. Of these items, I think the most important one is to just get another set of eyeballs on it. If you’re writing the page, you’re now too close to it and  no longer qualified to edit it.
+
+If you start using this template, realize that not every page on your site has to follow this exact format. Modify your web content structure and formatting so that it accomplishes the goals of the page. When in doubt, test.
+
+If we’ve missed anything that you feel needs to be included in this template, please tell me in the comments.
+
+Want your audience to take notice and take action on your brand’s content? Our newest Guide to Essential Content Marketing Tactics has tips, insights, and ideas that can help increase your success with today’s top content marketing plays.
