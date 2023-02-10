@@ -1,1 +1,0 @@
-db.post.find({$and: [{"by": 'Johny'}, {"title": 'NodeJs Overview'}]}).pretty();

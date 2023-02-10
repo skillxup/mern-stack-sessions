@@ -1,1 +1,0 @@
-console.log('child process at fork supporting level : ' + process.argv[2] + ' executed');
